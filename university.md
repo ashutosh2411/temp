@@ -47,6 +47,7 @@
 
 ## Design Documents
 ### The Database
+* The database will be hosted on the cloud. 
 * The Information table has the following signature.
 ```
 UniversityInfo::<*ID, Name, Address, Planet, Continent, Country, State, District, Website, Contact, Wikipedia, Area, Strength_of_students, Faculty_strength, ratio_of_international_students, list_of_available_streams, placement_details, no_of_papers_per_year, citations_per_faculty, international_faculty_proportion, teacher_student_ratio, list_of_available_degree>
@@ -57,7 +58,42 @@ CrowdSourcedInfo::<*ID, *email, Placement, Acads, Research, Interaction, Industr
 ```
 `*ed` attributes form the primary key. 
 ### The UI
+#### Search UI
 * On the left there will be a filter side bar where you can assign min, max pairs or values for search. 
-* All the options will be classified into fields. Refer diagram. 
-[!image/img.jpg]
+* Each value will be prefilled with default values. 
+* All the options will be classified into fields, and there will be a drop down menu to reveal all fields. 
+* Refer diagram. 
+<pre>
+                                               sort by option
+</pre>
+![UI](searchui.png)
+<pre>
+<center>Search UI design</center>
+</pre>
+#### Review and Rate UI
+* When person opens the link from his email, he will be able to rate universities. 
+* He will firstly be taken to list of universities, from there he can select the university he wants to rate. 
+* The UI looks like the following. 
+![Rate UI](rateui.png)
+<pre>
+<center>Slider based UI for rating Universities</center>
+</pre>
+### Connecting Backend and Frontend
+* Appropriate functions will be provided by backend team which will be used by the frontend team to query. 
+* Appropriate outputs will be provided by the the functions which will be displayed accordingly to the ui.
+
 ## Testing Documents
+### Database Testing
+* Unit testing of all search functions provided by the database. 
+* Unit testing of all insertion functions provided by the database. 
+* Attempt to modify UniversityInfo table without proper authentication. 
+* SQL injection attempt
+### UI Testing
+#### Search part testing
+* Unit testing for each filter. 
+* Unit testing for combinations of filters.
+* Resizing window testing
+#### Crowdsourcing part testing
+* Try to use an invalid link to review. 
+* multiple reviews to same university by the same person
+* on inserting new ratings, check if average rating updates or not
