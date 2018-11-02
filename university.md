@@ -50,11 +50,18 @@
 * The database will be hosted on the cloud. 
 * The Information table has the following signature.
 ```
-UniversityInfo::<*ID, Name, Address, Planet, Continent, Country, State, District, Website, Contact, Wikipedia, Area, Strength_of_students, Faculty_strength, ratio_of_international_students, list_of_available_streams, placement_details, no_of_papers_per_year, citations_per_faculty, international_faculty_proportion, teacher_student_ratio, list_of_available_degree>
+UniversityInfo::<*ID, Name, Address, Planet, Continent, 
+  Country, State, District, Website, Contact, Wikipedia, 
+  Area, Strength_of_students, Faculty_strength, 
+  ratio_of_international_students, list_of_available_streams, 
+  placement_details, no_of_papers_per_year, citations_per_faculty, 
+  international_faculty_proportion, teacher_student_ratio, 
+  list_of_available_degree, etc>
 ```
 * The Crowdsource table has the following signature.
 ```
-CrowdSourcedInfo::<*ID, *email, Placement, Acads, Research, Interaction, IndustryRelation, Facilities>
+CrowdSourcedInfo::<*ID, *email, Placement, Acads, Research, 
+Interaction, IndustryRelation, Facilities, etc>
 ```
 `*ed` attributes form the primary key. 
 ### The UI
@@ -63,6 +70,7 @@ CrowdSourcedInfo::<*ID, *email, Placement, Acads, Research, Interaction, Industr
 * Each value will be prefilled with default values. 
 * All the options will be classified into fields, and there will be a drop down menu to reveal all fields. 
 * Refer diagram. 
+
 <pre>
                                                sort by option
 </pre>
@@ -74,6 +82,7 @@ CrowdSourcedInfo::<*ID, *email, Placement, Acads, Research, Interaction, Industr
 * When person opens the link from his email, he will be able to rate universities. 
 * He will firstly be taken to list of universities, from there he can select the university he wants to rate. 
 * The UI looks like the following. 
+
 ![Rate UI](rateui.png)
 <pre>
 <center>Slider based UI for rating Universities</center>
