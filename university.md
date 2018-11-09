@@ -79,8 +79,11 @@ AcademicsView::<*ID, FacultyRation, etc>
                                                sort by option
 </pre>
 ![UI](searchui.png)
+
 Search UI design _hand-drawn_
+
 ![UI](searchUI.png)
+
 Search UI design 
 
 #### Review and Rate UI
@@ -89,8 +92,11 @@ Search UI design
 * The UI looks like the following. 
 
 ![Rate UI](rateui.png)
+
 Slider based UI for rating Universities _hand-drawn_
+
 ![Rate UI](rateUI.png)
+
 Slider based UI for rating Universities
 
 ### Connecting Backend and Frontend
